@@ -7,26 +7,60 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <link rel="stylesheet" href="/styles/nav.css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" />
+    <link rel="stylesheet" href="/styles/font-awesome.css" />
+
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
-
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
+      <img class="logo" src="/images/bird.png" >
       <span class="header">Tweeter</span>
+      <button class="compose-button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Compose</button>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets">
+          <textarea class="textarea" name="text" placeholder="What are you humming about?"></textarea>
+          <input class="tweet-button" type="submit" value="Tweet">
+          <span class="goAhead-message"> Type Away </span>
+          <span class="warning-message"> Chill Tommy Texter!! </span>
+          <span class="counter">140</span>
+        </form>
+      </section>
+      <section id='tweets'>
+        <article class='tweets'>
+          <header>
+            <img src="https://image.spreadshirtmedia.com/image-server/v1/compositions/111486968/views/1,width=300,height=300,version=1472100430/smiley-face-moustache-womens-premium-t-shirt.jpg" alt="Mr.Smiley" height="50" width="50">
+            <h1>Bill Nye</h1>
+            <span class="handler">@TheScienceGuy</span>
+          </header>
+        <p class="tweet-input">Tweet Tweet</p>
+        <footer>
+          <span>10 days ago</span>
+          <div class="icons"> <i class="fa fa-flag" aria-hidden="true"></i>            <i class="fa fa-retweet" aria-hidden="true"></i>               <i class="fa fa-heart" aria-hidden="true"></i> </div>
+        </footer>
+      </article>
+      </section>
     </main>
 
   </body>
